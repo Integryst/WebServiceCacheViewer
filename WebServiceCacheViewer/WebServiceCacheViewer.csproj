@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{55DBA35B-420A-490E-9A6C-26DEC84DDCA7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebServiceCacheViewer</RootNamespace>
+    <AssemblyName>WebServiceCacheViewer</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="analyticsfilter, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\analyticsfilter.dll</HintPath>
+    </Reference>
+    <Reference Include="analyticspei, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\analyticspei.dll</HintPath>
+    </Reference>
+    <Reference Include="analyticstag, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\analyticstag.dll</HintPath>
+    </Reference>
+    <Reference Include="dbutils, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\dbutils.dll</HintPath>
+    </Reference>
+    <Reference Include="DDTek.Oracle, Version=2.20.12.0, Culture=neutral, PublicKeyToken=c84cd5c63851e072">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\DDTek.Oracle.dll</HintPath>
+    </Reference>
+    <Reference Include="DDTek.SQLServer, Version=2.20.13.0, Culture=neutral, PublicKeyToken=c84cd5c63851e072">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\DDTek.SQLServer.dll</HintPath>
+    </Reference>
+    <Reference Include="gateway, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\gateway.dll</HintPath>
+    </Reference>
+    <Reference Include="httpmemorymanagement, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\httpmemorymanagement.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.83.1.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="jsincluder, Version=3.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\jsincluder.dll</HintPath>
+    </Reference>
+    <Reference Include="jsregistry, Version=3.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\jsregistry.dll</HintPath>
+    </Reference>
+    <Reference Include="LocaleSwitch, Version=1.0.3033.18111, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\LocaleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="nullnavigation, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\nullnavigation.dll</HintPath>
+    </Reference>
+    <Reference Include="opencache, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\opencache.dll</HintPath>
+    </Reference>
+    <Reference Include="openconfig, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\openconfig.dll</HintPath>
+    </Reference>
+    <Reference Include="opencounters, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\opencounters.dll</HintPath>
+    </Reference>
+    <Reference Include="opendb, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\opendb.dll</HintPath>
+    </Reference>
+    <Reference Include="openfoundation, Version=3.0.2.1, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\openfoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="openhttp, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\openhttp.dll</HintPath>
+    </Reference>
+    <Reference Include="openkernel, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\openkernel.dll</HintPath>
+    </Reference>
+    <Reference Include="openkernelsearch, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\openkernelsearch.dll</HintPath>
+    </Reference>
+    <Reference Include="openkernelsearchimpl, Version=3.6.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\openkernelsearchimpl.dll</HintPath>
+    </Reference>
+    <Reference Include="openlog-framework, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\openlog-framework.dll</HintPath>
+    </Reference>
+    <Reference Include="opensharedcache, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\opensharedcache.dll</HintPath>
+    </Reference>
+    <Reference Include="opensslchannel, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\opensslchannel.dll</HintPath>
+    </Reference>
+    <Reference Include="opentempfile, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\opentempfile.dll</HintPath>
+    </Reference>
+    <Reference Include="openusage, Version=3.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\openusage.dll</HintPath>
+    </Reference>
+    <Reference Include="openusage-api, Version=3.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\openusage-api.dll</HintPath>
+    </Reference>
+    <Reference Include="openusage-impl, Version=3.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\openusage-impl.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.111.7.20, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="plumtreeserver, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\plumtreeserver.dll</HintPath>
+    </Reference>
+    <Reference Include="pmb, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\pmb.dll</HintPath>
+    </Reference>
+    <Reference Include="portal, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\portal.dll</HintPath>
+    </Reference>
+    <Reference Include="portalnavigation, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\portalnavigation.dll</HintPath>
+    </Reference>
+    <Reference Include="portalpages, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\portalpages.dll</HintPath>
+    </Reference>
+    <Reference Include="portalpagesperf, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\portalpagesperf.dll</HintPath>
+    </Reference>
+    <Reference Include="portaluiinfrastructure, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\portaluiinfrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="provUIIncomingNetworkSearch, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\provUIIncomingNetworkSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="provUIIntrPortWS, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\provUIIntrPortWS.dll</HintPath>
+    </Reference>
+    <Reference Include="provUIMWS, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\provUIMWS.dll</HintPath>
+    </Reference>
+    <Reference Include="provUIOutgoingNetworkSearch, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\provUIOutgoingNetworkSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="provUIRAP, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\provUIRAP.dll</HintPath>
+    </Reference>
+    <Reference Include="provUIRemPortWS, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\provUIRemPortWS.dll</HintPath>
+    </Reference>
+    <Reference Include="provUIRPP, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\provUIRPP.dll</HintPath>
+    </Reference>
+    <Reference Include="provUISOAP, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\provUISOAP.dll</HintPath>
+    </Reference>
+    <Reference Include="provUIWWW, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\provUIWWW.dll</HintPath>
+    </Reference>
+    <Reference Include="pthome, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\pthome.dll</HintPath>
+    </Reference>
+    <Reference Include="ptportalobjects, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\ptportalobjects.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="taglibCore, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\taglibCore.dll</HintPath>
+    </Reference>
+    <Reference Include="taglibLogic, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\taglibLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="taglibPlugNav, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\taglibPlugNav.dll</HintPath>
+    </Reference>
+    <Reference Include="taglibPTData, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\taglibPTData.dll</HintPath>
+    </Reference>
+    <Reference Include="taglibPTUI, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\taglibPTUI.dll</HintPath>
+    </Reference>
+    <Reference Include="taglibStandard, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\taglibStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="taskapiserver, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\taskapiserver.dll</HintPath>
+    </Reference>
+    <Reference Include="uiinfrastructure, Version=6.0.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\uiinfrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="xerces144, Version=1.0.1073.8205, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\xerces144.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
