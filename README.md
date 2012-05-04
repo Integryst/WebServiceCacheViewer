@@ -1,4 +1,4 @@
-Reference: http://wiki.integryst.com/display/products/WebServiceCacheViewer
+Reference: http://wiki.integryst.com/display/wci/WebServiceCacheViewer
 
 # NAME
 Integryst WebServiceCacheViewer
